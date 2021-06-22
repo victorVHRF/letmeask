@@ -1,7 +1,5 @@
 import { useHistory } from 'react-router-dom'
 
-import { firebase, auth } from '../services/firebase'
-
 import illustationImg from '../assets/images/illustration.svg'
 import logoImg from '../assets/images/logo.svg'
 import googleIconImg from '../assets/images/google-icon.svg'
@@ -9,6 +7,7 @@ import googleIconImg from '../assets/images/google-icon.svg'
 import { Button } from '../components/Button'
 
 import '../styles/auth.scss'
+import { useContext } from 'react'
 
 export function Home() {
   const history = useHistory()

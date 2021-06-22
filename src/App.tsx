@@ -13,7 +13,7 @@ type User = {
 
 type AuthContextType = {
   user: User | undefined;
-  singInWithGoogle: () => Promise<void>;
+  singInWithGoogle: () => void;
 }
 
 export const AuthContext = createContext({} as AuthContextType)
@@ -28,7 +28,7 @@ function App() {
       if (result.user) {
         const { displayName, photoURL, uid } = result.user
 
-        if (!displayName || photoURL) {
+        if (!displayName || !photoURL) {
           throw new Error('Missing information from Google Account.')
         }
 
